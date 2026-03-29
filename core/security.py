@@ -13,6 +13,7 @@ ALGORITHM = "HS256"
 
 
 def hash_password(password: str) -> str:
+
     sha256_hash = hashlib.sha256(password.encode()).hexdigest()
     return pwd_context.hash(sha256_hash)
 
